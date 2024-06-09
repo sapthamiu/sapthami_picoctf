@@ -1,11 +1,60 @@
-## description
+## Description
 
-## data provided
+## Data Provided
 
-## hints
+## Hints
 
-## approach
+## Approach
 
-## commands
+## Commands
 
-## flags
+## Flags
+----------------------------------------------------------
+
+# Flags
+
+## Description
+What do the flags mean?
+
+## Data Provided
+<img width="821" alt="flag" src="https://github.com/sapthamiu/sapthami_picoctf/assets/157310822/7f8e4e70-6a49-44ff-9c53-9a4c238da951">
+
+## Hints
+The flag is in the format PICOCTF{}  
+
+## Approach
+The png file contains a set of flag symbols  
+When given to Google Lens, it said that these are the signal flags used in the navy  
+Looking up its chart decoded the required flag  
+
+![image](https://github.com/sapthamiu/sapthami_picoctf/assets/157310822/295e0486-95b6-4bbf-bffa-c0a64b040bdd)
+
+## Flags
+PICOCTF{f1ag5and5tuff}  
+
+# miniRSA
+
+## Description
+Let's decrypt this: ciphertext? Something seems a bit small.  
+
+## Data Provided
+N: 29331922499794985782735976045591164936683059380558950386560160105740343201513369939006307531165922708949619162698623675349030430859547825708994708321803705309459438099340427770580064400911431856656901982789948285309956111848686906152664473350940486507451771223435835260168971210087470894448460745593956840586530527915802541450092946574694809584880896601317519794442862977471129319781313161842056501715040555964011899589002863730868679527184420789010551475067862907739054966183120621407246398518098981106431219207697870293412176440482900183550467375190239898455201170831410460483829448603477361305838743852756938687673  
+e: 3  
+
+ciphertext (c): 2205316413931134031074603746928247799030155221252519872649649212867614751848436763801274360463406171277838056821437115883619169702963504606017565783537203207707757768473109845162808575425972525116337319108047893250549462147185741761825125  
+
+## Hints
+1: RSA <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">tutorial</a>  
+2: How could having too small an e affect the security of this 2048 bit key?  
+3: Make sure you don't lose precision, the numbers are pretty big (besides the e value)
+
+## Approach
+Hint 1 provides a link to the wikipedia page of the RSA cryptosystem  
+For an encrypted ciphertext c, the decryption function is  
+m(c)=(c^d) mod n  
+
+## Commands
+
+## Flags
+
+
