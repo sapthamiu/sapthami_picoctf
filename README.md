@@ -96,15 +96,17 @@ SYTe (eakdy tkd sjbyndr yar thjm) jdr j yobr kt skxbnyrd ersndzyo skxbryzyzkc. S
 2: Do the punctuation and the individual words help you make any substitutions?
 
 ## Approach
-A and I are the only letters in the english alphabet used individually, while j is the letter used individually in the given cipher text.  
-The sixth word is jdr.  
-If we substitute j as a, the word becomes
-We require only the flag part of the text, which is at the end: bzskSYT{TD3UN3CSO_4774SV5_4D3_S001_7JJ384LS}  
-We know that the flag is always in the format picoCTF{}  
-There is b in place of p, which suggests that the substitution 
-## Commands
+j is the letter that is being used individually, which indicates that it represents the letter a.  
+We know that the flag is always in the format picoCTF{}, which is at the end of the given text.  
+SYT seems to be representing CTF  
+Using the context, other letters are substituted as:  
+abcdefghijklmnopqrstuvwxyz---> hpnrsjwlqaobguyxdecfqkvmti  
+
+Decoded text:  
+CTFs (short for capture the flag) are a type of computer security competition. Contestants are presented with a set of challenges which test their creativity, technical (and googling) skills, and problem-solving ability. Challenges usually cover a number of categories, and when solved, each yields a string (called a flag) which is submitted to an online scoring service. CTFs are a great way to learn a wide array of computer security skills in a safe, legal environment, and are hosted and played by many security groups around the world for fun and practice. For this problem, the flag is: picoCTF{FR3QU3NCY_4774CK5_4R3_C001_7AA384BC}  
 
 ## Flags
+picoCTF{FR3QU3NCY_4774CK5_4R3_C001_7AA384BC}  
 
 
 
