@@ -29,7 +29,7 @@ Looking up its chart decoded the required flag
 
 ![image](https://github.com/sapthamiu/sapthami_picoctf/assets/157310822/295e0486-95b6-4bbf-bffa-c0a64b040bdd)
 
-## Flags
+## Flag
 PICOCTF{f1ag5and5tuff}  
 
 # miniRSA
@@ -52,9 +52,60 @@ ciphertext (c): 2205316413931134031074603746928247799030155221252519872649649212
 Hint 1 provides a link to the wikipedia page of the RSA cryptosystem  
 For an encrypted ciphertext c, the decryption function is  
 m(c)=(c^d) mod n  
+## Commands
 
+## Flag
+
+# transposition-trial
+
+## Description
+Our data got corrupted on the way here. Luckily, nothing got replaced, but every block of 3 got scrambled around!  
+The first word seems to be three letters long, maybe you can use that to recover the rest of the message.  
+Download the corrupted message here.  
+
+## Data Provided
+heTfl g as iicpCTo{7F4NRP051N5_16_35P3X51N3_V6E5926A}4  
+
+## Hints
+Split the message up into blocks of 3 and see how the first block is scrambled  
+
+## Approach
+Taking the given hint into consideration, split the coded text into groups of 3  
+heT  fl_  g_a  s_i  icp  CTo  {7F  4NR  P05  1N5  _16  _35  P3X  51N  3_V  6E5  926  A}4  
+It is clear that the first word is The, which shows that the rearrangement has taken place in the order: 123 to 312
+Applying this for all the blocks,
+The  _fl  ag_  is_  pic  oCT  F{7  R4N  5P0  51N  6_1  5_3  XP3  N51  V3_  56E  692  4A}  
+We get the required flag by joining these blocks  
+The flag is picoCTF{7R4N5P051N6_15_3XP3N51V3_56E6924A} 
+
+## Flags
+picoCTF{7R4N5P051N6_15_3XP3N51V3_56E6924A} 
+
+# Substitution1
+
+## Description
+A second message has come in the mail, and it seems almost identical to the first one.  
+Maybe the same thing will work again.
+Download the message here.
+
+## Data Provided
+SYTe (eakdy tkd sjbyndr yar thjm) jdr j yobr kt skxbnyrd ersndzyo skxbryzyzkc. Skcyreyjcye jdr bdrercyrq gzya j ery kt sajhhrcmre gazsa yrey yarzd sdrjyzwzyo, yrsaczsjh (jcq mkkmhzcm) evzhhe, jcq bdklhrx-ekhwzcm jlzhzyo. Sajhhrcmre nenjhho skwrd j cnxlrd kt sjyrmkdzre, jcq garc ekhwrq, rjsa ozrhqe j eydzcm (sjhhrq j thjm) gazsa ze enlxzyyrq yk jc kchzcr eskdzcm erdwzsr. SYTe jdr j mdrjy gjo yk hrjdc j gzqr jddjo kt skxbnyrd ersndzyo evzhhe zc j ejtr, hrmjh rcwzdkcxrcy, jcq jdr akeyrq jcq bhjorq lo xjco ersndzyo mdknbe jdkncq yar gkdhq tkd tnc jcq bdjsyzsr. Tkd yaze bdklhrx, yar thjm ze: bzskSYT{TD3UN3CSO_4774SV5_4D3_S001_7JJ384LS}
+
+## Hints
+1: Try a frequency attack  
+2: Do the punctuation and the individual words help you make any substitutions?
+
+## Approach
+A and I are the only letters in the english alphabet used individually, while j is the letter used individually in the given cipher text.  
+The sixth word is jdr.  
+If we substitute j as a, the word becomes
+We require only the flag part of the text, which is at the end: bzskSYT{TD3UN3CSO_4774SV5_4D3_S001_7JJ384LS}  
+We know that the flag is always in the format picoCTF{}  
+There is b in place of p, which suggests that the substitution 
 ## Commands
 
 ## Flags
+
+
 
 
