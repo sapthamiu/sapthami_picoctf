@@ -19,7 +19,7 @@ What do the flags mean?
 ## Data Provided
 <img width="821" alt="flag" src="https://github.com/sapthamiu/sapthami_picoctf/assets/157310822/7f8e4e70-6a49-44ff-9c53-9a4c238da951">
 
-## Hints
+## Hint
 The flag is in the format PICOCTF{}  
 
 ## Approach
@@ -66,19 +66,19 @@ Download the corrupted message here.
 ## Data Provided
 heTfl g as iicpCTo{7F4NRP051N5_16_35P3X51N3_V6E5926A}4  
 
-## Hints
+## Hint
 Split the message up into blocks of 3 and see how the first block is scrambled  
 
-## Approach
+## Approach 
 Taking the given hint into consideration, split the coded text into groups of 3  
-heT  fl_  g_a  s_i  icp  CTo  {7F  4NR  P05  1N5  _16  _35  P3X  51N  3_V  6E5  926  A}4  
+heT  fl_  g_a  s_i  icp  CTo  {7F  4NR  P05  1N5  \_16  \_35  P3X  51N  3_V  6E5  926  A}4  
 It is clear that the first word is The, which shows that the rearrangement has taken place in the order: 123 to 312
 Applying this for all the blocks,
-The  _fl  ag_  is_  pic  oCT  F{7  R4N  5P0  51N  6_1  5_3  XP3  N51  V3_  56E  692  4A}  
+The  \_fl  ag_  is_  pic  oCT  F{7  R4N  5P0  51N  6_1  5_3  XP3  N51  V3_  56E  692  4A}  
 We get the required flag by joining these blocks  
 The flag is picoCTF{7R4N5P051N6_15_3XP3N51V3_56E6924A} 
 
-## Flags
+## Flag
 picoCTF{7R4N5P051N6_15_3XP3N51V3_56E6924A} 
 
 # Substitution1
@@ -96,7 +96,7 @@ SYTe (eakdy tkd sjbyndr yar thjm) jdr j yobr kt skxbnyrd ersndzyo skxbryzyzkc. S
 2: Do the punctuation and the individual words help you make any substitutions?
 
 ## Approach
-j is the letter that is being used individually, which indicates that it represents the letter a.  
+j is the letter that is being used individually, which indicates that it represents the letter a (a is the only letter used alone, apart from i, which is contextually not possible here)   
 We know that the flag is always in the format picoCTF{}, which is at the end of the given text.  
 SYT seems to be representing CTF  
 Using the context, other letters are substituted as:  
@@ -105,8 +105,32 @@ abcdefghijklmnopqrstuvwxyz---> hpnrsjwlqaobguyxdecfqkvmti
 Decoded text:  
 CTFs (short for capture the flag) are a type of computer security competition. Contestants are presented with a set of challenges which test their creativity, technical (and googling) skills, and problem-solving ability. Challenges usually cover a number of categories, and when solved, each yields a string (called a flag) which is submitted to an online scoring service. CTFs are a great way to learn a wide array of computer security skills in a safe, legal environment, and are hosted and played by many security groups around the world for fun and practice. For this problem, the flag is: picoCTF{FR3QU3NCY_4774CK5_4R3_C001_7AA384BC}  
 
-## Flags
+## Flag
 picoCTF{FR3QU3NCY_4774CK5_4R3_C001_7AA384BC}  
+
+# Dachshund Attacks
+
+## Description
+What if d is too small? Connect with nc mercury.picoctf.net 30761.
+
+## Data Provided
+Welcome to my RSA challenge!
+e: 75217029650811489846101405143137544056581523652455476981684720901005437272165384004084218456044190313015919073617974917163893252918652818687298047536991815977785833447157368854453466076262514218075612787230393946923324384901756897661132158637508973425901297264790497874387605894243932830183852602058904425555
+n: 116863202103666735032712019027037288095627793136813400654892977083248758502782551053118888945579953465899390427557663408179345400296492301154030856454328623177127021095339428020236627638784582103634627559176487167311385367950787967240899989669249527883543958401037310291588817502115187169847182311398257141621
+c: 6978640109945401095080063888724342171674419956931628378176717936442829583321957234096788363316508199839753631882002529786199716795103629230478798268549933300981518120792287228139584396009955441468661665539539401672028578028754359576171508620278794145566254227559072103063431966964494872689774635450807933508
+
+## Hints
+What do you think about my pet? dachshund.jpg
+
+## Approach
+Connecting with the mentioned server through the powershell, the data is obtained.
+From the hint, the given problem can be decrypted using wiener attack (the dog is called a wiener dog)
+<a href="[https://en.wikipedia.org/wiki/Wiener%27s_attack](https://asecuritysite.com/rsa/rsa_ctf05)"> Wiener Attack Solver</a>
+
+## Commands
+
+## Flags
+picoCTF{proving_wiener_8652838}
 
 
 
