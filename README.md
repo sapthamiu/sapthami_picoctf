@@ -1,16 +1,3 @@
-## Description
-
-## Data Provided
-
-## Hints
-
-## Approach
-
-## Commands
-
-## Flags
-----------------------------------------------------------
-
 # Flags
 
 ## Description
